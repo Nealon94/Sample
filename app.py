@@ -3,7 +3,8 @@ from flask import Flask, send_file, jsonify
 app = Flask(__name__)
 
 # Path to your XML file
-xml_file_path = 'C:\Users\sar-nealon.dsouza\OneDrive - Riyadh International Catering Corp\Desktop\Sample Pojects\Pavan Lalwani Sales Report.xml'  # Use a relative path or ensure this path is correct
+xml_file_path =  r'C:\Users\sar-nealon.dsouza\OneDrive - Riyadh International Catering Corp\Desktop\Sample Pojects\Pavan Lalwani Sales Report.xml'
+'  # Use a relative path or ensure this path is correct
 
 @app.route('/extract-data', methods=['GET'])
 def extract_data():
