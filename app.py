@@ -1,10 +1,9 @@
 from flask import Flask, send_file, jsonify
-import os
 
 app = Flask(__name__)
 
-# Path to your XML file in the project directory
-xml_file_path = os.path.join(os.path.dirname(__file__), 'Pavan Lalwani Sales Report.xml')
+# Path to your XML file
+xml_file_path = '/path/to/your/file.xml'  # Use a relative path or ensure this path is correct
 
 @app.route('/extract-data', methods=['GET'])
 def extract_data():
@@ -15,4 +14,5 @@ def extract_data():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
+
